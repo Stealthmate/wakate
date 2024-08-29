@@ -6,18 +6,64 @@
 
 
 % Title
-\title{タイトル}
-\author{Anonymous}
-\institute{Overleaf}
-\date{2021}
+\title{モノレポのすゝめ}
+\author{Valeri Haralanov}
+\institute{無所属}
+\date{2024-09}
 
 \begin{document}
 
 \frame{\titlepage}
 
+
+\section{モノレポとは？}
 \begin{frame}
-\frametitle{Sample frame title}
-This is some text in the first frame. This is some text in the first frame. This is some text in the first frame.
+\frametitle{モノレポとは？ - 世間の見解}
+\begin{itemize}
+    % https://en.wikipedia.org/wiki/Monorepo
+    \item a monorepo is a software-development strategy in which the code for a number of projects is stored in the same repository (wiki)
+    % https://monorepo.tools/
+    \item A monorepo is a single repository containing multiple distinct projects, with well-defined relationships.
+    % https://nx.dev/concepts/decisions/why-monorepos
+    \item A monorepo is a single git repository that holds the source code for multiple applications and libraries, along with the tooling for them.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{何が嬉しいの？ - 世間の見解}
+
+\begin{itemize}
+    % https://en.wikipedia.org/wiki/Monorepo
+    \item No overhead to create new projects
+    \item Shared code and visibility
+    % https://monorepo.tools/
+    \item Atomic commits across projects
+    % https://nx.dev/concepts/decisions/why-monorepos
+    \item One version of everything
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{異議あり！論点を掘り下げてみよう！}
+    \begin{itemize}
+        \item No overhead to create new projects - 「PJ」 と 「レポ」を混同してない？
+        \item Shared code and visibility - どうやってシェアするの？ライブラリ？直接参照？それ，モノレポじゃなくてもできるくない？
+        \item Atomic commits across projects - 実は異議なし．それは本当にそう．だけど，誤解しちゃだめ(lockstep リリース)
+        \item One version of everything - それ本当に良いことなのか？
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{PJ と レポの違い}
+\end{frame}
+
+\begin{frame}
+    \frametitle{コードの共有}
+\end{frame}
+
+\begin{frame}
+    \frametitle{}
 \end{frame}
 
 \end{document}
