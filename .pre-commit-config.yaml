@@ -1,0 +1,10 @@
+repos:
+  - repo: local
+    hooks:
+      - id: chktex
+        name: ChkTeX
+        entry: chktex
+        language: system
+        files: ^.*\.tex$
+        args:
+          - -q
