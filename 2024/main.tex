@@ -1,9 +1,14 @@
 \documentclass{beamer}
+\usepackage[abspath]{currfile}
 \usetheme{metropolis}
 
 % Preamble
 \usepackage{luatexja-fontspec}
-\setmainjfont{Noto Sans CJK JP}
+\setmainjfont[
+  Path          = \currfileabsdir,
+  UprightFont   = NotoSansCJK-Regular.ttc,
+  BoldFont      = NotoSansCJK-Bold.ttc,
+]{example}
 
 
 % Title
