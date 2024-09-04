@@ -1,2 +1,2 @@
 setup:
-	tlmgr install chktex pgfopts beamertheme-metropolis
+	tlmgr install chktex pgfopts beamertheme-metropolis hyperref

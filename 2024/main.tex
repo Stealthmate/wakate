@@ -1,14 +1,25 @@
 \documentclass{beamer}
 \usepackage[abspath]{currfile}
-\usetheme{metropolis}
+\usepackage{luatexja-fontspec}
+\usepackage{hyperref}
 
 % Preamble
-\usepackage{luatexja-fontspec}
+\usetheme{metropolis}
 \setmainjfont[
   Path          = \currfileabsdir,
   UprightFont   = NotoSansCJK-Regular.ttc,
   BoldFont      = NotoSansCJK-Bold.ttc,
 ]{example}
+
+\hypersetup{colorlinks,urlcolor=blue}
+
+\newcommand{\netquote}[3]{
+    \begin{block}{}
+        {\textit{#1}}
+        \vskip5mm
+        \hspace*\fill{\small--- \href{#2}{#3}}
+    \end{block}
+}
 
 
 % Title
