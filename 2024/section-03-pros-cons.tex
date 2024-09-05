@@ -1,13 +1,68 @@
-\section{何が嬉しいの？}
+\section{To モノレポ or not to モノレポ}
 \begin{frame}
-    \frametitle{何が嬉しいの？ --- 世間の見解}
-    \begin{itemize}
-        % https://en.wikipedia.org/wiki/Monorepo
-        \item No overhead to create new projects
-        \item Shared code and visibility
-        % https://monorepo.tools/
-        \item Atomic commits across projects
-        % https://nx.dev/concepts/decisions/why-monorepos
-        \item One version of everything
-    \end{itemize}
+    \frametitle{何が嬉しいの？}
+    \only<2>{
+        \opinionsby{https://danluu.com/monorepo/}{danluu.com/monorepo}{
+            \opinion{Projects can be organized and grouped together in whatever way you find to be most logically consistent, and not just because your version control system forces you to organize things in a particular way.}
+            \opinion{{Tools basically just need to be able to read files.}}
+        }
+    }
+    \only<3>{
+        \opinionsby{https://www.reddit.com/r/ExperiencedDevs/comments/tmca5u/comment/i1xtv3b}{/r/ExperiencedDevs}{
+            \opinion{Monorepos make local dev easy. One Git pull and run a script. All services and dependencies running from master on your machine.}
+        }
+    }
+    \only<4>{
+        \opinionsby{https://circleci.com/ja/blog/monorepo-dev-practices/}{CircleCI}{
+            \opinion{モノレポなら、チーム間に障壁やサイロが生じることがないので、連携性の高いマイクロサービスを設計、メンテナンスしやすくなります。}
+        }
+    }
+    \only<5>{
+        \opinionsby{https://zenn.dev/mikann_mikann/scraps/6bd6b8b31bb564}{zenn.dev/mikann\_mikann}{
+            \opinion{リポジトリを単一化し、共通モデル、共有ライブラリ、ヘルパーコードをすべてまとめておけば、マイクロサービスが多くてもこれらを使いまわせる。}
+        }
+    }
+    \only<6>{
+        \opinionsby{https://tech.buysell-technologies.com/entry/adventcalendar2023-12-11}{tech.buysell-technologies.com}{
+            \opinion{1つのPull Requestを作成するのに10分だとしても、10リポジトリを対象にすると100分かかる。}
+        }
+    }
+    \only<7>{
+        \opinionsby{https://hireroo.io/journal/tech/mono-repo-for-microservices}{hireroo.io}{
+            \opinion{開発時に複数のリポジトリをIDEなどで開く必要がなくプロジェクト間の移動が容易。}
+        }
+    }
+    \only<8>{
+        \opinionsby{https://medium.com/streamdal/mostly-terrible-the-monorepo-5db704f76bdb}{medium.com/streamdal}{
+            \opinion{If you want to report a bug and you don't know if it's caused by the server, wasm , console, or some other component, where do you submit the issue?}
+        }
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{何がめんどいの？}
+    \only<2>{
+        \opinionsby{https://circleci.com/ja/blog/monorepo-dev-practices/}{CircleCI}{
+            \opinion{共通のコードを変更すると、数多くのアプリケーション コンポーネントに影響が及んでしまいます。ソースの競合によりマージしにくい場合もあります。}
+            \opinion{デプロイ プロセスが複雑化する可能性があり、ソース管理システムのスケーリングも必要です。}
+        }
+    }
+    \only<3>{
+        \opinionsby{https://tech.buysell-technologies.com/entry/adventcalendar2023-12-11}{tech.buysell-technologies.com}{
+            \opinion{1つの巨大なGitリポジトリを作成する事により、Gitのパフォーマンス低下が起きる可能性があります。}
+        }
+    }
+    \only<4>{
+        \opinionsby{https://buildersbox.corp-sansan.com/entry/2024/05/27/110000}{buildersbox.corp-sansan.com}{
+            \opinion{チーム構造がフラットでない場合（業務委託など）の権限管理が大変。}
+        }
+    }
+    \only<5>{
+        \opinionsby{https://kk-web.link/blog/20210507}{kk-web.link}{
+            \opinion{自分が関わらないコードも自分の環境下に置くこととなる}
+            \opinion{自分に関係のないコミットが打たれる}
+            \opinion{パッケージ間の依存関係が大量に発生する}
+            \opinion{関わるメンバー全員にモノレポの知識が求められる}
+        }
+    }
 \end{frame}

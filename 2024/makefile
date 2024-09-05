@@ -1,4 +1,4 @@
-main.pdf: main.tex
+main.pdf: main.tex section-01-introduction.tex section-02-definitions.tex section-03-pros-cons.tex
 	lualatex main
 
 clean:
