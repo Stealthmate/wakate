@@ -1,7 +1,7 @@
-\section{TODO: 分析タイトル}
+\section{本質を探ろう}
 
 \begin{frame}
-    \frametitle{分析}
+    \frametitle{本質を探ろう}
     \opinionsToWord{凝集度}{
         \item<2-> \opCohesionA{}
         \item<3-> \opCohesionB{}
@@ -10,7 +10,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{分析}
+    \frametitle{本質を探ろう}
     \opinionsToWord{作業効率}{
         \item<2-> \opMeritEfficiencyA{}
         \item<3-> \opMeritEfficiencyB{}
@@ -21,7 +21,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{分析}
+    \frametitle{本質を探ろう}
     \opinionsToWord{結合度}{
         \item<2-> \opCouplingA{}
         \item<3-> \opCouplingB{}
@@ -32,7 +32,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{分析}
+    \frametitle{本質を探ろう}
     \opinionsToWord{作業効率}{
         \item<2-> \opDemeritEfficiencyA{}
         \item<3-> \opDemeritEfficiencyB{}
@@ -41,22 +41,57 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{異議あり！論点を掘り下げてみよう！}
+    \frametitle{本質を探ろう --- まとめ}
     \begin{block}{}
         \centering
         \begin{tabular}{cc}
             \toprule
             メリット & デメリット \\
             \midrule
-            \only<1>{凝集度}\only<2>{\textcolor{red}{凝集度}} & \only<1>{結合度}\only<2>{\textcolor{red}{結合度}} \\
             作業効率 & 作業効率 \\
+            凝集度 & 結合度 \\
             \bottomrule
         \end{tabular}
     \end{block}
 \end{frame}
 
 \begin{frame}
-    \frametitle{モノレポとポリレポ --- 凝集度と結合度}
+    \frametitle{本質を探ろう --- 作業効率}
+    \begin{block}{}
+        \centering
+        \begin{tabular}{cc}
+            \toprule
+            メリット & デメリット \\
+            \midrule
+            \textcolor{red}{作業効率} & \textcolor{red}{作業効率} \\
+            凝集度 & 結合度 \\
+            \bottomrule
+        \end{tabular}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{本質を探ろう --- 作業効率}
+    \centering\includegraphics[height=150pt]{efficiency.png}
+\end{frame}
+
+\begin{frame}
+    \frametitle{本質を探ろう --- 凝縮度と結合度}
+    \begin{block}{}
+        \centering
+        \begin{tabular}{cc}
+            \toprule
+            メリット & デメリット \\
+            \midrule
+            作業効率 & 作業効率 \\
+            \textcolor{red}{凝集度} & \textcolor{red}{結合度} \\
+            \bottomrule
+        \end{tabular}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{本質を探ろう --- 凝縮度と結合度}
     \only<2-3>{
         \onslide<2-3>{
             \begin{block}{凝集度}
@@ -81,11 +116,6 @@
         \vskip5mm
         \hspace*\fill{\small--- \href{https://www.ogis-ri.co.jp/otc/hiroba/technical/Cohesion_Coupling/Cohesion_Coupling.html}{オージス研}}
     }
-\end{frame}
-
-\begin{frame}
-    \frametitle{モノレポとポリレポ --- 作業効率}
-    \centering\includegraphics[height=150pt]{efficiency.png}
 \end{frame}
 
 % \begin{frame}
