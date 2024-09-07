@@ -1,0 +1,24 @@
+\section{To モノレポ or not to モノレポ?}
+
+\begin{frame}
+    \frametitle{どういうときにモノレポが良いのか？}
+    \small
+    \begin{block}{大前提}
+        \begin{enumerate}
+            \item<2-> 関係あるもの同士を同じ個体にまとめるのは管理コストを下げる．
+            \item<3-> 個体を分割することは管理コストを上げる．
+        \end{enumerate}
+    \end{block}
+    \onslide<4>{
+        \Large\emphasize{=> 原則モノレポが良い．}
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{どういうときにモノレポを分けるべきか？}
+\end{frame}
+
+% 関係あるものは，基本的にわけない方が良い．
+% 分けるのは分けざるを得ないとき = ツールのパフォ or 仕様でそもそも物理的に一緒にできないとき(pip とか，閲覧権とか)，もしくは非技術的な要因でそうせざるを得なくなったとき(監査とか，法律とか)
+
+% 分けざるを得ないとき「以外」に分けたらこうなる: 結合したまま分ける(= be/fe/infra で分ける等)と，結局別れてない＝ overhead が増えるだけ
