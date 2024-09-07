@@ -2,6 +2,7 @@
 \usepackage[abspath]{currfile}
 \usepackage{luatexja-fontspec}
 \usepackage{hyperref}
+\usepackage{booktabs}
 
 % Preamble
 \usetheme{metropolis}
@@ -23,12 +24,26 @@
 
 \newcommand{\opinion}[1]{\item \textit{#1}\vskip5mm}
 \newcommand{\opinionsby}[3]{
-    \begin{itemize}
-    #3
-    \end{itemize}
-    \hspace*\fill{\small--- \href{#1}{#2}}
+    \begin{block}{}
+        \begin{itemize}
+        #3
+        \end{itemize}
+        \hspace*\fill{\small--- \href{#1}{#2}}
+    \end{block}
 }
 
+\newcommand{\opinionsToWord}[3]{
+    \footnotesize
+    \begin{itemize}
+        #2
+    \end{itemize}
+
+    \onslide<#3>{
+        \Large\textcolor{red}{=> #1}
+    }
+}
+
+\input{data}
 
 % Title
 \title{モノレポのすゝめ}

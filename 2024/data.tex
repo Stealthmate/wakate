@@ -1,0 +1,21 @@
+\def\opCohesionA{Projects can be organized and grouped together in whatever way you find to be most logically consistent, and not just because your version control system forces you to organize things in a particular way.}
+
+\def\opCohesionB{モノレポなら、チーム間に障壁やサイロが生じることがないので、連携性の高いマイクロサービスを設計、メンテナンスしやすくなります。}
+
+\def\opCohesionC{[With monorepos,] If you want to report a bug and you don't know if it's caused by the server, wasm , console, or some other component, where do you submit the issue?}
+
+\def\opMeritEfficiencyA{Tools basically just need to be able to read files.}
+\def\opMeritEfficiencyB{Monorepos make local dev easy. One Git pull and run a script. All services and dependencies running from master on your machine.}
+\def\opMeritEfficiencyC{リポジトリを単一化し、共通モデル、共有ライブラリ、ヘルパーコードをすべてまとめておけば、マイクロサービスが多くてもこれらを使いまわせる。}
+\def\opMeritEfficiencyD{1つのPull Requestを作成するのに10分だとしても、10リポジトリを対象にすると100分かかる。}
+\def\opMeritEfficiencyE{開発時に複数のリポジトリをIDEなどで開く必要がなくプロジェクト間の移動が容易。}
+
+\def\opCouplingA{共通のコードを変更すると、数多くのアプリケーション コンポーネントに影響が及んでしまいます。ソースの競合によりマージしにくい場合もあります。}
+\def\opCouplingB{チーム構造がフラットでない場合（業務委託など）の権限管理が大変。}
+\def\opCouplingC{自分が関わらないコードも自分の環境下に置くこととなる。}
+\def\opCouplingD{自分に関係のないコミットが打たれる。}
+\def\opCouplingE{パッケージ間の依存関係が大量に発生する。}
+
+\def\opDemeritEfficiencyA{デプロイプロセスが複雑化する可能性があり、ソース管理システムのスケーリングも必要です。}
+\def\opDemeritEfficiencyB{1つの巨大なGitリポジトリを作成する事により、Gitのパフォーマンス低下が起きる可能性があります。}
+\def\opDemeritEfficiencyC{関わるメンバー全員にモノレポの知識が求められる。}
