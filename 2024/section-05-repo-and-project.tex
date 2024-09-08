@@ -7,6 +7,7 @@
         \begin{enumerate}
             \item<2-> 関係あるもの同士を同じ個体にまとめるのは管理コストを下げる．
             \item<3-> 個体を分割することは管理コストを上げる．
+            \item<4-> 現実的に管理可能な個体の規模には限度がある．
         \end{enumerate}
     \end{block}
     \onslide<4>{
@@ -15,10 +16,77 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{どういうときにモノレポを分けるべきか？}
+    \frametitle{じゃ，どういうときにモノレポを分けるべきか？}
+    会社のコードをすべて同じレポに入れたらどうなる？
+    \begin{itemize}
+        \item<2-> 人間による制約
+        \begin{itemize}
+            \item<3-> PR の処理が速すぎて追いつかない
+            \item<4-> 情報が多すぎて整理できない (認知負荷が高い)
+        \end{itemize}
+        \item<5-> 人間以外による制約
+        \begin{itemize}
+            \item<6-> レポが重すぎて開けない
+            \item<7-> 局所的に作業するツールがない
+            \item<8-> Git そのものが落ちる
+        \end{itemize}
+        \item<9-> 人工的な制約
+        \begin{itemize}
+            \item<10-> 法律，監査要件等
+        \end{itemize}
+    \end{itemize}
+    \onslide<11>{
+        \emphasize{現実の上限にぶち当たるから分けるべき．}
+    }
 \end{frame}
 
-% 関係あるものは，基本的にわけない方が良い．
-% 分けるのは分けざるを得ないとき = ツールのパフォ or 仕様でそもそも物理的に一緒にできないとき(pip とか，閲覧権とか)，もしくは非技術的な要因でそうせざるを得なくなったとき(監査とか，法律とか)
+\begin{frame}
+    \frametitle{どうやって分けるか？}
+    例えばこういう状況を想像してみよう
+    \begin{itemize}
+        \item<2-> MV 株式会社が2個のサービスを提供する
+        \item<3-> サービス \textcolor{red}{A} はチーム \textcolor{red}{A} がレポ \textcolor{red}{A} で開発している
+        \item<4-> サービス \textcolor{green}{B} はチーム \textcolor{green}{B} がレポ \textcolor{green}{B} で開発している
+        \item<5-> チーム \textcolor{red}{A} と \textcolor{green}{B} はお互いに独立 (名前も顔も GH も知らない)
+        \item<6-> サービス \textcolor{red}{A} と \textcolor{green}{B} は同じインフラ上にデプロイされる
+        \item<7-> チーム \textcolor{blue}{C} がインフラを管理している
+    \end{itemize}
+    \onslide<8>{
+        \begin{block}{練習問題}
+            インフラ関連のコードはどこに置くべきか？
+            \begin{enumerate}
+                \item レポ \textcolor{red}{A} と \textcolor{green}{B} それぞれに置く
+                \item 新たにレポ \textcolor{blue}{C} を作ってそこに置く
+            \end{enumerate}
+        \end{block}
+    }
+\end{frame}
 
-% 分けざるを得ないとき「以外」に分けたらこうなる: 結合したまま分ける(= be/fe/infra で分ける等)と，結局別れてない＝ overhead が増えるだけ
+\begin{frame}
+    \frametitle{どうやって分けるか？}
+    \begin{itemize}
+        \item<2-> インフラ関連のコードの所有者が \textcolor{red}{A}, \textcolor{green}{B}, \textcolor{blue}{C} 全員．
+        \item<3-> それぞれのチーム目線では，それぞれのレポで管理するのが最適．
+        \begin{itemize}
+            \item<4-> (復習)
+            \item<5->「関係あるもの同士を同じ個体にまとめるのは管理コストを下げる．」
+            \item<6->「個体を分割することは管理コストを上げる．」
+        \end{itemize}
+    \end{itemize}
+    \onslide<7>{
+        \Large\emphasize{=> A と C, B と C の利益が排反するから正解がない．}
+    }
+\end{frame}
+
+\begin{frame}
+    \LARGE
+    ご清聴ありがとうございました！
+\end{frame}
+
+\begin{frame}
+    \LARGE
+    \only<1>{なんか．．．悲しい．．．}
+    \only<2>{このまま終わらせるのか．．．？}
+\end{frame}
+
+% モノレポ = 単一バージョンではない」をどこかで主張したかも？
