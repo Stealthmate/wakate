@@ -10,7 +10,7 @@
             \item<4-> 現実的に管理可能な個体の規模には限度がある．
         \end{enumerate}
     \end{block}
-    \onslide<4>{
+    \onslide<5>{
         \Large\emphasize{=> 原則モノレポが良い．}
     }
 \end{frame}
@@ -45,36 +45,16 @@
     例えばこういう状況を想像してみよう
     \begin{itemize}
         \item<2-> MV 株式会社が2個のサービスを提供する
-        \item<3-> サービス \textcolor{red}{A} はチーム \textcolor{red}{A} がレポ \textcolor{red}{A} で開発している
-        \item<4-> サービス \textcolor{green}{B} はチーム \textcolor{green}{B} がレポ \textcolor{green}{B} で開発している
-        \item<5-> チーム \textcolor{red}{A} と \textcolor{green}{B} はお互いに独立 (名前も顔も GH も知らない)
-        \item<6-> サービス \textcolor{red}{A} と \textcolor{green}{B} は同じインフラ上にデプロイされる
-        \item<7-> チーム \textcolor{blue}{C} がインフラを管理している
+        \item<3-> サービス \textcolor{red}{A} はチーム \textcolor{red}{A}，サービス \textcolor{green}{B} はチーム \textcolor{green}{B} が開発している．
+        \item<5-> チーム \textcolor{red}{A} と \textcolor{green}{B} はお互いに独立 (名前も顔も GH も知らない)．
+        \item<6-> サービス \textcolor{red}{A} のコードとサービス \textcolor{green}{B} のコードは同じモノレポ \textcolor{blue}{C} 内にある．
+        \item<7-> サービス \textcolor{red}{A} もサービス \textcolor{green}{B} もそれぞれ front-end と back-end から成る．
     \end{itemize}
     \onslide<8>{
+        \normalfont
         \begin{block}{練習問題}
-            インフラ関連のコードはどこに置くべきか？
-            \begin{enumerate}
-                \item レポ \textcolor{red}{A} と \textcolor{green}{B} それぞれに置く
-                \item 新たにレポ \textcolor{blue}{C} を作ってそこに置く
-            \end{enumerate}
+            レポ \textcolor{blue}{C} が大きくなりすぎてもうモノレポのままじゃ無理そうで分割しなければならない．どのように分割するか？
         \end{block}
-    }
-\end{frame}
-
-\begin{frame}
-    \frametitle{どうやって分けるか？}
-    \begin{itemize}
-        \item<2-> インフラ関連のコードの所有者が \textcolor{red}{A}, \textcolor{green}{B}, \textcolor{blue}{C} 全員．
-        \item<3-> それぞれのチーム目線では，それぞれのレポで管理するのが最適．
-        \begin{itemize}
-            \item<4-> (復習)
-            \item<5->「関係あるもの同士を同じ個体にまとめるのは管理コストを下げる．」
-            \item<6->「個体を分割することは管理コストを上げる．」
-        \end{itemize}
-    \end{itemize}
-    \onslide<7>{
-        \Large\emphasize{=> A と C, B と C の利益が排反するから正解がない．}
     }
 \end{frame}
 

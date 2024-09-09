@@ -1,1 +1,43 @@
-\section{レポは組織の鏡}
+\section{モノレポから学ぶポリレポの組み方}
+
+\begin{frame}
+    \frametitle{どうやって分けるのか？}
+    \begin{enumerate}
+        \item<2-> サービス \textcolor{red}{A} をレポ \textcolor{red}{A} に，サービス \textcolor{green}{B} をレポ \textcolor{green}{B} に移行する．
+        \item<3-> それぞれのサービスの front-end をレポ \textcolor{blue}{C\textsubscript{1}} に， back-end をレポ \textcolor{blue}{C\textsubscript{2}} に移行する．
+        \item<4-> (その他)
+    \end{enumerate}
+    \onslide<5>{
+        \Large\emphasize{=> そりゃ 1. だろ．}
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{なぜそう分けるのか？}
+    \begin{itemize}
+        \item<2-> サービスで分けた方が，関係するもの同士だけで固まる
+        \begin{itemize}
+            \item<3-> \emphasize{凝集度が上がる}
+        \end{itemize}
+        \item<4-> 同じく，関係ないものが分かれる
+        \begin{itemize}
+            \item<5-> \emphasize{結合度が下がる}
+        \end{itemize}
+        \item<6-> 何より，開発者にとっては楽．
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{コンポーネントごとに分けるのはだめなのか？}
+
+    \begin{itemize}
+        \item<2-> front-end 同士のレポと back-end 同士のレポ
+        \begin{itemize}
+            \item<3-> そういえば・・・
+            \item<4-> \href{https://github.com/ProtonMail/WebClients}{ProtonMail}
+            \item<5-> モノレポをモノレポに分けるｯﾃｺﾄ？
+        \end{itemize}
+        \item<6-> 何が悪いのか？
+        \item<7-> 依存関係を正しく組めば実現可能
+    \end{itemize}
+\end{frame}
