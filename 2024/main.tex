@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[compress]{beamer}
 \usepackage[abspath]{currfile}
 \usepackage{luatexja-fontspec}
 \usepackage{hyperref}
@@ -6,7 +6,16 @@
 \usepackage[normalem]{ulem} % either use this (simple) or
 
 % Preamble
-\usetheme{metropolis}
+\usetheme[progressbar=head]{moloch}
+\setbeamertemplate{footline}{%
+    \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=3ex,dp=1.5ex,leftskip=2ex,rightskip=2ex]{page footer}%
+        \usebeamerfont{title in head/foot}%
+        \insertshorttitle \hfill
+        \insertsection \hfill
+        \insertframenumber{} / \inserttotalframenumber
+    \end{beamercolorbox}}%
+}
 \setmainjfont[
   Path          = \currfileabsdir,
   UprightFont   = NotoSansCJK-Regular.ttc,
