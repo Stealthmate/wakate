@@ -40,4 +40,26 @@
         \item<6-> 何が悪いのか？
         \item<7-> 依存関係を正しく組めば実現可能
     \end{itemize}
+
+    \onslide<8->{\Large\emphasize{実は，この分け方でも良いんだ！}}
+\end{frame}
+
+\begin{frame}
+    \frametitle{モノレポ != 単一な中身}
+    \begin{itemize}
+        \item<2-> 何を「個体」と見るかは要件次第
+        \item<3-> 同じレポ内でも複数の個体を独立管理することは可能
+        \begin{itemize}
+            \item<4-> タグ
+            \item<5-> CODEOWNERS
+            \item<6-> パスフィルタリング (CI)
+        \end{itemize}
+        \item<7-> 依存関係には種類がある
+        \begin{itemize}
+            \item<8-> ソースコードへの依存
+            \item<9-> バージョン管理されたコードへの依存
+            \item<10-> バイナリ等への依存
+        \end{itemize}
+        \item<11-> \emphasize{モノレポだからと言って，バージョン管理をしなくて良いわけではない！}
+    \end{itemize}
 \end{frame}
