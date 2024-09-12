@@ -1,0 +1,16 @@
+- モノレポとは何か？
+- (定義を軽く読み上げる)
+- 我々の説明
+  - 複数のもの（PJ, lib, app, etc.、総じて「個体」）が混在しているレポ
+- 例レポ紹介
+  - React
+    - compiler だったり
+    - eslint plugin だったり
+    - jest （テスト）関連だったり
+    - react の内部パッケージだったり
+    - util 関係のパッケージだったり
+      - scheduler
+  - ProtonMail
+    - Proton のサービス（GSuite みたいな感じ）ごとのクライアント
+    - applications - アプリごとのソース
+    - util 関係のパッケージ (styles, utils, sieve など)
